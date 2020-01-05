@@ -34,8 +34,8 @@ fun Canvas.drawCorSqFillLine(i : Int, size : Float, scale : Float, paint : Paint
     rotate(90f * i)
     save()
     translate(-size, -size)
-    rotate(90f * sf)
-    drawLine(0f, 0f, size, 0f, paint)
+    rotate(-90f * sf)
+    drawLine(0f, 0f, 2 * size, 0f, paint)
     restore()
     restore()
 }
@@ -59,7 +59,7 @@ fun Canvas.drawCSFLBNode(i : Int, scale : Float, paint : Paint) {
     paint.strokeWidth = Math.min(w, h) / strokeFactor
     save()
     translate(w / 2, gap * (i + 1))
-    drawCorFillSquare(size, scale, paint)
+    drawCorFillSquare(size / 2, scale, paint)
     restore()
 }
 
