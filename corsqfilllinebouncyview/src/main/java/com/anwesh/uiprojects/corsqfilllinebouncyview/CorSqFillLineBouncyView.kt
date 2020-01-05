@@ -215,6 +215,13 @@ class CorSqFillLineBouncyView(ctx : Context) : View(ctx) {
                 animator.start()
             }
         }
+    }
 
+    companion object {
+        fun create(activity : Activity) : CorSqFillLineBouncyView {
+            val view : CorSqFillLineBouncyView = CorSqFillLineBouncyView(activity)
+            activity.setContentView(view)
+            return view
+        }
     }
 }
